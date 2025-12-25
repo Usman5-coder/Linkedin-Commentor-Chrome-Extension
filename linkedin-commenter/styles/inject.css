@@ -1,0 +1,274 @@
+.gemini-comment-buttons {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+  animation: gemini-fade-in 0.3s ease;
+}
+
+@keyframes gemini-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gemini-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.gemini-btn:hover:not(:disabled) {
+  background: #004182;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gemini-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gemini-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gemini-btn svg {
+  flex-shrink: 0;
+}
+
+.gemini-btn-regenerate {
+  background: #057642;
+}
+
+.gemini-btn-regenerate:hover:not(:disabled) {
+  background: #035a32;
+}
+
+.gemini-generating {
+  animation: gemini-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes gemini-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.gemini-notification {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: white;
+  color: #333;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.gemini-notification-show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.gemini-notification-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.gemini-notification-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.gemini-notification-info {
+  background: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.gemini-result-popup {
+  position: absolute;
+  bottom: calc(100% + 50px);
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  min-width: 400px;
+  max-width: 500px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.gemini-popup-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gemini-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.gemini-popup-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.gemini-popup-close {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.gemini-popup-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.gemini-popup-content {
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.gemini-popup-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  display: block;
+  width: 100%;
+}
+
+.gemini-popup-actions {
+  display: flex;
+  gap: 10px;
+  padding: 16px 20px;
+  border-top: 1px solid #e0e0e0;
+  background: #f9f9f9;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.gemini-popup-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.gemini-popup-btn-copy {
+  background: white;
+  color: #0a66c2;
+  border: 2px solid #0a66c2;
+}
+
+.gemini-popup-btn-copy:hover {
+  background: #e7f3ff;
+}
+
+.gemini-popup-btn-insert {
+  background: #0a66c2;
+  color: white;
+}
+
+.gemini-popup-btn-insert:hover {
+  background: #004182;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gemini-popup-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .gemini-result-popup {
+    min-width: 300px;
+    max-width: 350px;
+    right: 50%;
+    transform: translateX(50%) translateY(10px);
+  }
+
+  .gemini-popup-show {
+    transform: translateX(50%) translateY(0);
+  }
+
+  .gemini-comment-buttons {
+    top: -40px;
+    gap: 6px;
+  }
+
+  .gemini-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .gemini-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}

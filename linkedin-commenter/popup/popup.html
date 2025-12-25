@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Gemini Commenter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 8v8m-4-4h8"/>
+      </svg>
+      <h1>LinkedIn Gemini Commenter</h1>
+    </div>
+
+    <div class="content">
+      <div class="info-box">
+        <p>Generate professional LinkedIn comments using Google Gemini AI.</p>
+      </div>
+
+      <form id="apiKeyForm">
+        <div class="form-group">
+          <label for="apiKey">Gemini API Key</label>
+          <div class="input-wrapper">
+            <input 
+              type="password" 
+              id="apiKey" 
+              placeholder="Enter your Gemini API key"
+              autocomplete="off"
+            >
+            <button type="button" id="toggleVisibility" class="toggle-btn" title="Show/Hide API key">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <small class="help-text">
+            Get your API key from 
+            <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a>
+          </small>
+        </div>
+
+        <button type="submit" id="saveBtn" class="btn btn-primary">
+          <span>Save API Key</span>
+        </button>
+      </form>
+
+      <div id="status" class="status"></div>
+
+      <div class="instructions">
+        <h3>How to use:</h3>
+        <ol>
+          <li>Enter your Gemini API key above and click Save</li>
+          <li>Navigate to any LinkedIn post</li>
+          <li>Click on a comment box</li>
+          <li>Click "Generate Comment" to create an AI-powered response</li>
+          <li>Use "Regenerate" to create a different comment</li>
+        </ol>
+      </div>
+
+      <div class="footer">
+        <p>Your API key is stored locally and never shared.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
