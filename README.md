@@ -24,7 +24,6 @@
 - [📦 Installation](#-installation)
 - [🔑 Getting Your Gemini API Key](#-getting-your-gemini-api-key)
 - [🎮 Usage](#-usage)
-- [📸 Screenshots](#-screenshots)
 - [🏗️ Architecture](#️-architecture)
 - [🛠️ Technical Stack](#️-technical-stack)
 - [🔒 Privacy & Security](#-privacy--security)
@@ -239,33 +238,6 @@ Choose one:
 │  [📋 Copy]  [✏️ Insert to Comment] │
 └─────────────────────────────────────┘
 ```
-
----
-
-## 📸 Screenshots
-
-<details open>
-<summary><b>Click to expand/collapse screenshots</b></summary>
-
-### Extension Popup
-![Extension Popup](https://via.placeholder.com/800x600/0a66c2/ffffff?text=Extension+Settings+Popup)
-*Configure your Gemini API key*
-
-### LinkedIn Interface
-![LinkedIn Buttons](https://via.placeholder.com/800x400/057642/ffffff?text=Generate+%26+Regenerate+Buttons)
-*Generate and Regenerate buttons appear on comment boxes*
-
-### Generated Comment Popup
-![Comment Popup](https://via.placeholder.com/800x500/0a66c2/ffffff?text=Generated+Comment+Popup)
-*Review, copy, or insert your AI-generated comment*
-
-### Copy Success
-![Copy Feedback](https://via.placeholder.com/400x200/057642/ffffff?text=Copied+Successfully)
-*Visual feedback when copying*
-
-</details>
-
----
 
 ## 🏗️ Architecture
 
