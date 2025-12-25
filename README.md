@@ -138,7 +138,7 @@ git clone https://github.com/yourusername/linkedin-gemini-commenter.git
 
 1. **Visit Google AI Studio**
    ```
-   🔗 https://makersuite.google.com/app/apikey
+   🔗 https://aistudio.google.com/app/api-keys
    ```
 
 2. **Sign in with your Google account**
